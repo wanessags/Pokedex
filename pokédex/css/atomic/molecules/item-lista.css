@@ -1,0 +1,47 @@
+.item-lista-molecula {
+    /* Garante que o conteúdo (imagem, nome, ID) se alinhe verticalmente */
+    display: flex;
+    /* Ativa o sistema Flexbox */
+    flex-direction: column;
+    /* Empilha os itens verticalmente (imagem em cima, texto em baixo) */
+    align-items: center;
+    /* Centraliza os itens horizontalmente (ex: imagem, nome) */
+    justify-content: center;
+    /* Centraliza os itens verticalmente (se houver espaço extra) */
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro, indicando que o elemento é clicável */
+    min-height: 180px;
+    /* Garante uma altura mínima para todos os cartões, mantendo a uniformidade */
+}
+
+.item-lista-molecula:hover {
+    /* Estilo aplicado quando o cursor está sobre o cartão (interatividade) */
+    transform: scale(1.05);
+    /* Aumenta ligeiramente o tamanho do cartão em 5% para um efeito visual de destaque */
+    /* Seria bom adicionar uma propriedade 'transition' no .item-lista-molecula para suavizar este efeito! */
+}
+
+/* Nome do Pokémon: Cor mais forte */
+.item-lista-molecula .nome-pokemon {
+    /* Estilos aplicados especificamente ao nome do Pokémon (texto-átomo) */
+    font-weight: bold;
+    /* Torna o texto mais pesado e visível */
+    text-transform: capitalize;
+    /* Garante que a primeira letra seja maiúscula (boa prática de apresentação) */
+    margin-top: 5px;
+    /* Espaçamento acima do nome (separando da imagem) */
+    font-size: 1.1em;
+    /* Tamanho ligeiramente maior que o texto base */
+}
+
+/* ID do Pokémon: Cor discreta */
+.item-lista-molecula .texto-atom {
+    /* Estilos aplicados ao ID do Pokémon */
+    font-size: 0.9em;
+    /* Tamanho ligeiramente menor que o texto base */
+    font-weight: normal;
+    /* Peso normal do texto */
+    /* Usamos uma cor mais suave para ser menos marcante que o nome */
+    color: #575757;
+    /* Cor cinza escuro para ser discreta, mas legível */
+}

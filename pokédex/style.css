@@ -1,0 +1,55 @@
+
+@import url("css/atomic/atoms/base.css");
+/* Importa estilos de base (reset, fontes, variáveis globais) */
+@import url("css/atomic/atoms/botoes.css");
+/* Importa estilos para elementos de botões */
+@import url("css/atomic/atoms/cards.css");
+/* Importa estilos para elementos de cartões (base do cartão de lista) */
+@import url("css/atomic/molecules/campo-busca.css");
+/* Importa estilos para o campo de pesquisa (input + botão) */
+@import url("css/atomic/molecules/item-lista.css");
+/* Importa estilos para o cartão completo da lista (molécula que usa atoms/cards) */
+@import url("css/atomic/organisms/header.css");
+/* Importa estilos para o cabeçalho da aplicação */
+@import url("css/atomic/organisms/lista-pokedex.css");
+/* Importa estilos para o container da lista de Pokémons (grade/flex) */
+
+/* CSS essencial para o pop-up funcionar corretamente */
+.modal-overlay {
+    /* Estilos do fundo escuro que cobre toda a tela quando o detalhe está ativo */
+	position: fixed;
+    /* Posição fixa: permanece visível mesmo que o utilizador role a página */
+	top: 0;
+	left: 0;
+	width: 100%;
+    /* Ocupa toda a largura */
+	height: 100%;
+    /* Ocupa toda a altura */
+	background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+	display: flex;
+    /* Usa flexbox para centralizar o conteúdo (o card de detalhe) */
+	justify-content: center;
+    /* Centraliza horizontalmente o conteúdo */
+	align-items: center;
+    /* Centraliza verticalmente o conteúdo */
+	z-index: 1000; /* Garante que fique acima de todo o conteúdo */
+}
+
+.modal-overlay.hidden {
+	display: none;
+    /* Oculta o elemento */
+}
+
+/* Garante que o card de detalhe apareça por cima de tudo */
+#pokemonDetail {
+    /* Estilos do container que alberga o cartão de detalhe (este é filho do overlay) */
+	position: relative;
+	z-index: 1001;
+    /* Z-index ligeiramente superior ao do overlay para garantir que o cartão se destaque */
+    /* Adicione estilos para centralizar e formatar o card de detalhe aqui */
+}
+
+#pokemonDetail.hidden {
+	display: none;
+    /* Oculta o elemento quando não está em uso */
+}

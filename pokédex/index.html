@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="img/picachu.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="header-organism">
+        <h1 class="titulo-atom">Pokédex</h1> 
+        <div class="busca-molecula">
+            <input type="text" id="searchInput" class="input-atom" placeholder="Buscar por nome ou ID">
+            <button id="searchBtn" class="botao-atom primary-atom">Buscar</button>
+        </div>
+    </header>
+
+    <main class="container-organism">
+        <div id="error" class="hidden texto-atom error-message"></div>
+        <section id="pokemonList" class="lista-pokedex-organism"></section>
+        <aside id="pokemonDetail" class="hidden"></aside>
+    </main>
+    
+    <script src="js/model/PokemonModel.js"></script>
+    <script src="js/service/ApiService.js"></script>
+    <script src="js/view/PokemonView.js"></script>
+    <script src="js/controller/PokemonController.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

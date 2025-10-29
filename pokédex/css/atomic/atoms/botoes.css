@@ -1,0 +1,29 @@
+/*
+  Classe base para botões no design atômico.
+  Define o tamanho, bordas, aparência e comportamento geral do botão.
+*/
+.botao-atom {
+    padding: 10px 15px;     /* Espaçamento interno (vertical e horizontal) dentro do botão */
+    border: none;           /* Remove qualquer borda padrão do botão */
+    border-radius: 5px;     /* Arredonda levemente os cantos do botão */
+    cursor: pointer;        /* Mostra o ícone de "mão" ao passar o mouse sobre o botão */
+    font-weight: bold;      /* Deixa o texto do botão em negrito */
+    font-size: 1em;         /* Define o tamanho padrão da fonte do botão */
+}
+
+/*
+  Efeito visual quando o usuário passa o mouse sobre o botão.
+  Dá um pequeno destaque (transparência leve) para indicar interatividade.
+*/
+.botao-atom:hover {
+    opacity: 0.9; /* Fica levemente transparente ao passar o mouse */
+}
+
+/*
+  Classe para o botão principal (átomo primário).
+  Define uma cor de fundo escura e o texto branco para contraste.
+*/
+.primary-atom {
+    background-color: rgb(64, 77, 50); /* Cor de fundo verde-escuro */
+    color: #ffffff;                    /* Cor do texto branca */
+}

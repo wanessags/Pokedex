@@ -1,0 +1,42 @@
+/* ORGANISMO: header.css - CÓDIGO CORRIGIDO E OTIMIZADO */
+.header-organism {
+    background-image: url('../../../img/pokemons.jpg'); /* ATENÇÃO AQUI: Caminho da imagem */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 120px;
+    /* Propriedades essenciais para o overlay e z-index */
+    position: relative; 
+    z-index: 1; /* Garante que o header esteja acima de outros elementos, mas abaixo do overlay */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 120px; /* Adicionado: Garante uma altura mínima para o cabeçalho */
+    overflow: hidden; /* Adicionado: Para garantir que nada transborde visualmente */
+}
+
+/* Pseudo-elemento para criar uma camada de escurecimento (overlay) */
+.header-organism::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Posiciona o overlay abaixo do conteúdo (título e busca) */
+}
+
+/* Garante que o conteúdo do header seja visível sobre o overlay */
+.header-organism .titulo-atom,
+.header-organism .busca-molecula {
+    color: white; /* Muda a cor do título para branco para contrastar com o overlay */
+    font-weight: bold;
+    z-index: 2; /* Garante que o texto fique acima do overlay (z-index: -1) */
+}
+
+/* O título precisa ser branco para ser legível sobre o overlay escuro. */
+.header-organism .titulo-atom {
+    color: rgb(255, 255, 255); 
+    font-size: 2.5em; /* Título maior */
+}

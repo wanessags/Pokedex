@@ -1,0 +1,174 @@
+:root{
+  /* Fortes */
+  --color-fire-strong:#EE8130;--color-grass-strong:#7AC74C;--color-poison-strong:#A33EA1;
+  --color-water-strong:#6390F0;--color-electric-strong:#F7D02C;--color-normal-strong:#A8A77A;
+  --color-bug-strong:#A6B91A;--color-fighting-strong:#C22E28;--color-flying-strong:#A98FF3;
+  --color-ground-strong:#E2BF65;--color-psychic-strong:#F95587;--color-rock-strong:#B6A136;
+  --color-ghost-strong:#735797;--color-ice-strong:#96D9D6;--color-dragon-strong:#6F35FC;
+  --color-steel-strong:#B7B7CE;--color-dark-strong:#705746;--color-fairy-strong:#D685AD;
+  --color-misc-strong:#68A090;
+
+  /* Claras */
+  --color-fire-light:#ffe6cc;--color-grass-light:#e6ffe6;--color-poison-light:#ffe6ff;
+  --color-water-light:#e6f0ff;--color-electric-light:#fffae6;--color-normal-light:#f3f3e0;
+  --color-bug-light:#f3f9e0;--color-fighting-light:#fbe6e5;--color-flying-light:#f4f2fe;
+  --color-ground-light:#fcf6e7;--color-psychic-light:#fef0f4;--color-rock-light:#f7f4e9;
+  --color-ghost-light:#ebe7f0;--color-ice-light:#f0f7f7;--color-dragon-light:#ece7ff;
+  --color-steel-light:#f6f6fa;--color-dark-light:#ebe7e5;--color-fairy-light:#fbebf3;
+  --color-misc-light:#e6f0ec;
+
+  /* Hover (forte) */
+  --color-fire-hover:#D67329;--color-grass-hover:#6EB245;--color-poison-hover:#933891;
+  --color-water-hover:#5580D8;--color-electric-hover:#E0BA28;--color-normal-hover:#92906b;
+  --color-bug-hover:#93a518;--color-fighting-hover:#ad2823;--color-flying-hover:#937ad8;
+  --color-ground-hover:#c9a95a;--color-psychic-hover:#e04a78;--color-rock-hover:#9e8d30;
+  --color-ghost-hover:#654c86;--color-ice-hover:#85c2bf;--color-dragon-hover:#642ec3;
+  --color-steel-hover:#a4a4b8;--color-dark-hover:#614a38;--color-fairy-hover:#bf739a;
+  --color-misc-hover:#5d8e80;
+
+  /* Hover (light) */
+  --color-fire-light-hover:#fff2e6;--color-grass-light-hover:#f2fff2;--color-poison-light-hover:#fff2ff;
+  --color-water-light-hover:#f2f7ff;--color-electric-light-hover:#ffffee;--color-normal-light-hover:#fcfcf9;
+  --color-bug-light-hover:#fcfcf5;--color-fighting-light-hover:#fdf2f1;--color-flying-light-hover:#fbfaff;
+  --color-ground-light-hover:#fffefb;--color-psychic-light-hover:#fff6f8;--color-rock-light-hover:#fcfbf6;
+  --color-ghost-light-hover:#f5f3f8;--color-ice-light-hover:#f7fbfb;--color-dragon-light-hover:#f5f2ff;
+  --color-steel-light-hover:#fbfbfd;--color-dark-light-hover:#f5f3f1;--color-fairy-light-hover:#fdf5f8;
+  --color-misc-light-hover:#f2f7f5;
+}
+
+/* card base */
+.card-atom{
+  background:#f8f9ff;border:1px solid #b7baf4;border-radius:12px;padding:15px;
+  text-align:center;transition:all .3s ease;cursor:pointer;
+}
+.card-atom:hover{transform:translateY(-5px) scale(1.03);border-color:#fff;background:#f8f9ff}
+
+/* IMAGEM / TEXTOS */
+.imagem-atom{width:96px;height:96px;margin-bottom:10px;transition:transform .3s ease}
+.card-atom:hover .imagem-atom{transform:scale(1.1)}
+.card-atom h3{font-size:1.1em;font-weight:700;color:#333;margin:5px 0 2px}
+.card-atom p{font-size:.9em;color:#333;margin:0}
+
+/* tipos — estilo idêntico: borda base + fundo base; hover altera borda e fundo */
+.card-atom.fire{border-color:var(--color-fire-strong);background:var(--color-fire-light)}
+.card-atom.fire:hover{border-color:var(--color-fire-hover);background:var(--color-fire-light-hover)}
+
+.card-atom.grass{border-color:var(--color-grass-strong);background:var(--color-grass-light)}
+.card-atom.grass:hover{border-color:var(--color-grass-hover);background:var(--color-grass-light-hover)}
+
+.card-atom.poison{border-color:var(--color-poison-strong);background:var(--color-poison-light)}
+.card-atom.poison:hover{border-color:var(--color-poison-hover);background:var(--color-poison-light-hover)}
+
+.card-atom.water{border-color:var(--color-water-strong);background:var(--color-water-light)}
+.card-atom.water:hover{border-color:var(--color-water-hover);background:var(--color-water-light-hover)}
+
+.card-atom.electric{border-color:var(--color-electric-strong);background:var(--color-electric-light)}
+.card-atom.electric:hover{border-color:var(--color-electric-hover);background:var(--color-electric-light-hover)}
+
+.card-atom.normal{border-color:var(--color-normal-strong);background:var(--color-normal-light)}
+.card-atom.normal:hover{border-color:var(--color-normal-hover);background:var(--color-normal-light-hover)}
+
+.card-atom.bug{border-color:var(--color-bug-strong);background:var(--color-bug-light)}
+.card-atom.bug:hover{border-color:var(--color-bug-hover);background:var(--color-bug-light-hover)}
+
+.card-atom.fighting{border-color:var(--color-fighting-strong);background:var(--color-fighting-light)}
+.card-atom.fighting:hover{border-color:var(--color-fighting-hover);background:var(--color-fighting-light-hover)}
+
+.card-atom.flying{border-color:var(--color-flying-strong);background:var(--color-flying-light)}
+.card-atom.flying:hover{border-color:var(--color-flying-hover);background:var(--color-flying-light-hover)}
+
+.card-atom.ground{border-color:var(--color-ground-strong);background:var(--color-ground-light)}
+.card-atom.ground:hover{border-color:var(--color-ground-hover);background:var(--color-ground-light-hover)}
+
+.card-atom.psychic{border-color:var(--color-psychic-strong);background:var(--color-psychic-light)}
+.card-atom.psychic:hover{border-color:var(--color-psychic-hover);background:var(--color-psychic-light-hover)}
+
+.card-atom.rock{border-color:var(--color-rock-strong);background:var(--color-rock-light)}
+.card-atom.rock:hover{border-color:var(--color-rock-hover);background:var(--color-rock-light-hover)}
+
+.card-atom.ghost{border-color:var(--color-ghost-strong);background:var(--color-ghost-light)}
+.card-atom.ghost:hover{border-color:var(--color-ghost-hover);background:var(--color-ghost-light-hover)}
+
+.card-atom.ice{border-color:var(--color-ice-strong);background:var(--color-ice-light)}
+.card-atom.ice:hover{border-color:var(--color-ice-hover);background:var(--color-ice-light-hover)}
+
+.card-atom.dragon{border-color:var(--color-dragon-strong);background:var(--color-dragon-light)}
+.card-atom.dragon:hover{border-color:var(--color-dragon-hover);background:var(--color-dragon-light-hover)}
+
+.card-atom.steel{border-color:var(--color-steel-strong);background:var(--color-steel-light)}
+.card-atom.steel:hover{border-color:var(--color-steel-hover);background:var(--color-steel-light-hover)}
+
+.card-atom.dark{border-color:var(--color-dark-strong);background:var(--color-dark-light)}
+.card-atom.dark:hover{border-color:var(--color-dark-hover);background:var(--color-dark-light-hover)}
+
+.card-atom.fairy{border-color:var(--color-fairy-strong);background:var(--color-fairy-light)}
+.card-atom.fairy:hover{border-color:var(--color-fairy-hover);background:var(--color-fairy-light-hover)}
+
+.card-atom.unknown,.card-atom.shadow{border-color:var(--color-misc-strong);background:var(--color-misc-light)}
+.card-atom.unknown:hover,.card-atom.shadow:hover{border-color:var(--color-misc-hover);background:var(--color-misc-light-hover)}
+
+/* badges - definição da cor */
+.type-container{margin:10px 0;display:flex;justify-content:center;gap:8px}
+.type-badge{display:inline-block;padding:4px 10px;border-radius:12px;font-weight:700;font-size:.9em;text-transform:uppercase;border:1px solid;color:#fff}
+.tipo-fighting-atom{background:var(--color-fighting-strong);color:#fff}
+.tipo-grass-atom{background:var(--color-grass-strong);color:#333}
+.tipo-fire-atom{background:var(--color-fire-strong);color:#fff}
+.tipo-poison-atom{background:var(--color-poison-strong);color:#fff}
+.tipo-water-atom{background:var(--color-water-strong);color:#fff}
+.tipo-electric-atom{background:var(--color-electric-strong);color:#333}
+.tipo-normal-atom{background:var(--color-normal-strong);color:#fff}
+.tipo-bug-atom{background:var(--color-bug-strong);color:#fff}
+.tipo-flying-atom{background:var(--color-flying-strong);color:#fff}
+.tipo-ground-atom{background:var(--color-ground-strong);color:#333}
+.tipo-psychic-atom{background:var(--color-psychic-strong);color:#fff}
+.tipo-rock-atom{background:var(--color-rock-strong);color:#fff}
+.tipo-ghost-atom{background:var(--color-ghost-strong);color:#fff}
+.tipo-ice-atom{background:var(--color-ice-strong);color:#333}
+.tipo-dragon-atom{background:var(--color-dragon-strong);color:#fff}
+.tipo-steel-atom{background:var(--color-steel-strong);color:#333}
+.tipo-dark-atom{background:var(--color-dark-strong);color:#fff}
+.tipo-fairy-atom{background:var(--color-fairy-strong);color:#fff}
+.tipo-unknown-atom,.tipo-shadow-atom{background:var(--color-misc-strong);color:#fff}
+
+\* Detalhe da cor \*
+.detail-name.tipo-fire-text{color:var(--color-fire-strong)}
+.detail-name.tipo-grass-text{color:var(--color-grass-strong)}
+.detail-name.tipo-poison-text{color:var(--color-poison-strong)}
+.detail-name.tipo-water-text{color:var(--color-water-strong)}
+.detail-name.tipo-electric-text{color:var(--color-electric-strong)}
+.detail-name.tipo-normal-text{color:var(--color-normal-strong)}
+.detail-name.tipo-bug-text{color:var(--color-bug-strong)}
+.detail-name.tipo-fighting-text{color:var(--color-fighting-strong)}
+.detail-name.tipo-flying-text{color:var(--color-flying-strong)}
+.detail-name.tipo-ground-text{color:var(--color-ground-strong)}
+.detail-name.tipo-psychic-text{color:var(--color-psychic-strong)}
+.detail-name.tipo-rock-text{color:var(--color-rock-strong)}
+.detail-name.tipo-ghost-text{color:var(--color-ghost-strong)}
+.detail-name.tipo-ice-text{color:var(--color-ice-strong)}
+.detail-name.tipo-dragon-text{color:var(--color-dragon-strong)}
+.detail-name.tipo-steel-text{color:var(--color-steel-strong)}
+.detail-name.tipo-dark-text{color:var(--color-dark-strong)}
+.detail-name.tipo-fairy-text{color:var(--color-fairy-strong)}
+.detail-name.tipo-unknown-text,.detail-name.tipo-shadow-text{color:var(--color-misc-strong)}
+
+\* Detalhe do card \*
+.card-detalhe-organism{background:#fff;border-radius:8px;padding:20px}
+.card-detalhe-organism.fire-detail-bg{background:var(--color-fire-light)}
+.card-detalhe-organism.grass-detail-bg{background:var(--color-grass-light)}
+.card-detalhe-organism.poison-detail-bg{background:var(--color-poison-light)}
+.card-detalhe-organism.water-detail-bg{background:var(--color-water-light)}
+.card-detalhe-organism.electric-detail-bg{background:var(--color-electric-light)}
+.card-detalhe-organism.normal-detail-bg{background:var(--color-normal-light)}
+.card-detalhe-organism.bug-detail-bg{background:var(--color-bug-light)}
+.card-detalhe-organism.fighting-detail-bg{background:var(--color-fighting-light)}
+.card-detalhe-organism.flying-detail-bg{background:var(--color-flying-light)}
+.card-detalhe-organism.ground-detail-bg{background:var(--color-ground-light)}
+.card-detalhe-organism.psychic-detail-bg{background:var(--color-psychic-light)}
+.card-detalhe-organism.rock-detail-bg{background:var(--color-rock-light)}
+.card-detalhe-organism.ghost-detail-bg{background:var(--color-ghost-light)}
+.card-detalhe-organism.ice-detail-bg{background:var(--color-ice-light)}
+.card-detalhe-organism.dragon-detail-bg{background:var(--color-dragon-light)}
+.card-detalhe-organism.steel-detail-bg{background:var(--color-steel-light)}
+.card-detalhe-organism.dark-detail-bg{background:var(--color-dark-light)}
+.card-detalhe-organism.fairy-detail-bg{background:var(--color-fairy-light)}
+.card-detalhe-organism.unknown-detail-bg,.card-detalhe-organism.shadow-detail-bg{background:var(--color-misc-light)}

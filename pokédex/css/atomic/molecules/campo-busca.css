@@ -1,0 +1,36 @@
+.busca-molecula {
+    /* Container que envolve o campo de input e o botão */
+    display: flex;
+    /* Ativa o Flexbox para alinhar os itens lado a lado */
+    gap: 10px; /* Espaço entre o input e o botão */
+    /* Define o espaçamento entre o input e o botão */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro (útil se o botão e o input tiverem alturas diferentes) */
+}
+
+/* O input-atom (Átomo) define o estilo do campo de texto */
+.busca-molecula .input-atom {
+    /* Estilos aplicados ao campo de texto (input) dentro da molécula */
+    /* Ajusta a largura para que o campo de busca seja proeminente */
+    width: 250px;
+    /* Define uma largura fixa para o campo em ecrãs maiores */
+    padding: 10px 15px;
+    /* Espaçamento interno (topo/baixo e esquerda/direita) */
+    border: 1px solid #ffffff;
+    /* Borda branca inicial (bom para fundos escuros, mas pode ser ajustado para fundos claros) */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    font-size: 1em;
+    /* Tamanho de fonte padrão */
+    transition: border-color 0.3s;
+    /* Prepara para transicionar a cor da borda, suavizando o efeito de foco */
+}
+
+/* Efeito ao focar no input (Melhoria de estética) */
+.busca-molecula .input-atom:focus {
+    /* Estilos aplicados quando o campo de input está ativo/focado */
+    outline: none; /* Remove a borda padrão do navegador */
+    /* Remove o contorno padrão, que muitas vezes é inconsistente entre navegadores */
+    /* Aqui, tipicamente adicionaríamos uma mudança de cor na borda ou sombra para indicar o foco, por exemplo: */
+    /* border-color: #3e8e41; */
+}

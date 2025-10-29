@@ -1,0 +1,61 @@
+/* Estilos para o container principal da página */
+.container-organism {
+    /* Container central que envolve a maioria do conteúdo (excluindo o header fixo, talvez) */
+    padding: 20px;
+    /* Espaçamento interno em torno do conteúdo */
+    max-width: 1200px;
+    /* Define a largura máxima do conteúdo para ecrãs grandes */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente na página */
+}
+
+/* Estilos para o container da lista de Pokémons (grade/grid) */
+.lista-pokedex-organism {
+    /* Este é o container onde os cartões de Pokémon são renderizados */
+    display: grid;
+    /* Ativa o sistema de grid para o layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Layout responsivo: cria colunas que se ajustam automaticamente */
+    /* auto-fit: Preenche a linha com o máximo de colunas possível */
+    /* minmax(150px, 1fr): Cada coluna tem no mínimo 150px de largura e expande-se igualmente (1fr) */
+    gap: 20px;
+    /* Espaçamento entre as células da grelha (cartões) */
+    margin-top: 20px;
+    /* Margem superior para separar da barra de pesquisa/header */
+}
+
+/* Estilos para o cartão de detalhe do Pokémon (o conteúdo do modal) */
+.card-detalhe-organism {
+    /* O elemento que contém o conteúdo do pop-up de detalhes */
+    position: fixed;
+    /* Fixa o cartão no viewport, sobrepondo o resto do conteúdo */
+    top: 50%; left: 50%;
+    /* Move o ponto de referência do canto superior esquerdo para o centro */
+    transform: translate(-50%, -50%);
+    /* Translação que move o elemento de volta 50% da sua própria largura/altura para centralização perfeita */
+    width: 90%; max-width: 450px;
+    /* Garante que o cartão ocupe 90% da largura em ecrãs pequenos, limitado a 450px em ecrãs grandes */
+    z-index: 1000;
+    /* Garante que o cartão de detalhe apareça por cima de tudo */
+    padding: 30px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto e elementos inline-block internos */
+    /* Nota: as cores de fundo e sombra serão provavelmente adicionadas em ficheiros atómicos ou de tipo específico */
+}
+
+/* Estilos para as "badges" de tipo do Pokémon */
+.type-badge {
+    /* Aplica-se aos elementos que mostram os tipos (ex: Água, Fogo) */
+    padding: 5px 10px;
+    /* Espaçamento interno do badge */
+    border-radius: 5px;
+    /* Cantos ligeiramente arredondados */
+    font-weight: bold;
+    /* Texto em negrito */
+    display: inline-block;
+    /* Permite definir largura/altura e aplicar margem, comportando-se como um texto */
+    margin-right: 5px;
+    /* Margem para separar badges adjacentes */
+    /* Nota: As cores específicas dos tipos (tipo-fire-atom) virão do ficheiro botoes.css ou atoms/cards.css */
+}

@@ -1,0 +1,35 @@
+/* 
+  O seletor universal (*) aplica estas regras a todos os elementos da página.
+  Remove margens e espaçamentos padrões, e ajusta o box model.
+*/
+* {
+    margin: 0;            /* Remove todas as margens externas padrão dos elementos */
+    padding: 0;           /* Remove todos os espaçamentos internos padrão dos elementos */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo total da largura/altura */
+}
+
+/*
+  Define o estilo geral do corpo da página (body).
+  Escolhe a fonte, a cor de fundo e o espaçamento entre linhas.
+*/
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
+    background-color: #f8f1f1;      /* Define uma cor de fundo muito clara */
+    line-height: 1.6;               /* Aumenta o espaçamento vertical entre linhas do texto */
+}
+
+/*
+  Classe "texto-atom" — pode representar um componente textual no design atômico.
+  Define o tamanho e a cor do texto.
+*/
+.texto-atom { 
+    font-size: 1em;  /* Define o tamanho da fonte (1em = tamanho padrão do texto) */
+    color: black;    /* Define a cor do texto como preta */
+}
+    
+/*
+  Classe "hidden" — usada para ocultar elementos visualmente e logicamente da página.
+*/
+.hidden {
+    display: none !important; /* Esconde completamente o elemento e ignora outras regras de exibição */
+}
